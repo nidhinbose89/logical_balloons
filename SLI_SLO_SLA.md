@@ -1,10 +1,12 @@
 # SLI, SLO, SLA.
 Developers try to be agile, while Operators strive for stability/security.
 
-SRE
-- Define availability
+SRE focus on
+- Defining availability
 - Level of availability
-- Plan in case of failure
+- Level of utilization
+- Planning in case of failure
+- Monitor
 
 Define metrics in advance and agree on it.
 100% availability is not realistic.
@@ -73,3 +75,22 @@ a product.
 
 SRE should be able to enforce error budgets. The risk and error budget are means to balance
 availability and new feature development/deployment.
+
+# Toil
+Toil and Overhead are different - overhead is sending email, documentation, meetings, travel etc.
+Toil is tied to running production service that is
+- manual
+- repetative
+- automatable
+- tactical
+- devoid of long-term value
+- scales linearly as service grows
+
+Even making it a script to take care of all manual activies is toil.
+Because its still not emiminated and lives outside of the production service --
+especially since it needs to be run manually.
+Toil has no enduring value as the work to automate it has!
+Toil is measured by recoding the time spent of the pager duty calls [incident management service]
+or other manual intervention tasks -- just to get the service up and running.
+Toil need not be eliminated 100%, automate those that worth it -- based on frequency of occurance
+and impact.
