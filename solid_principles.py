@@ -75,9 +75,10 @@ print(find_cars('green'), 'Liskov substitution principle')
 
 
 # Interface Segregation Principle [ISP]
+# many client facing interfaces are better than a general purpose interface!
 # keep base class as simple as possible; if base is fat, 
-# it would need rework once a base inherits and it doesnt need functionality
-# then need would arise to add/inherited automatically dummy methods.
+# it would need rework once a base inherits -- and that is expected, 
+# this helps in avoiding dummy methods in inherited classes
 class Walker(ABC):
   @abstractmethod
   def walk(self) -> bool:
